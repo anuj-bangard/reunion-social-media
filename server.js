@@ -30,7 +30,7 @@ app.use('/api', like)
 app.use('/api', comment)
 
 app.get('/', function (_, res) {
-  res.send("<h1>Server Working</h1>");
+  res.sendFile(__dirname + "/home.html");
 })
 
 app.use((error, req, res, next) => {
